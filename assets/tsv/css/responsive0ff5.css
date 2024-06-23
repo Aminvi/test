@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1199px) {
+
+  .proposal_history_dot_b::before {
+    left: 7rem;
+    min-width: 100px;
+  }
+
+}
+
+
+@media only screen and (max-width: 991px) {
+  section.banner_section {
+    height: auto;
+  }
+
+  footer ul.footer_navigation li:first-child {
+    width: 100%;
+  }
+
+  footer .footer_navigation li.dot:first-child {
+    display: none;
+  }
+
+  .logo_border_animation {
+    justify-content: center;
+    display: flex;
+  }
+
+  .proposal_history_dot_main {
+    width: 50%;
+  }
+
+  .proposal_history_dot_2::before {
+    display: none;
+  }
+
+  .proposal_history_dot_b::before {
+    min-width: 100px;
+    left: 112px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .proposal_history_dot_b::before {
+    left: 70px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .governance_proposals {
+    margin: 0px 5px;
+    padding: 15px;
+  }
+
+  .proposal_history_dot_main {
+    width: 100%;
+  }
+
+  .proposal_history_dot_b::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .payment_btn .btn {
+    padding: 14px;
+  }
+
+  section.banner_section h1 {
+    font-size: 50px;
+  }
+
+  .heading h1 {
+    font-size: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 443px) {
+  .listing_top_icon_right .form-select {
+    width: 100%;
+  }
+
+  .listing_top_icon_right {
+    width: 100%;
+  }
+
+  .terms_condition_content_section {
+    padding: 30px 20px 100px 20px;
+  }
+
+  .stats ul li {
+    width: 100%;
+  }
+
+  .stats ul li.dot {
+    width: 100%;
+    background-color: #A0A0A0;
+    height: 1px;
+    margin: 10px 0px;
+  }
+}
