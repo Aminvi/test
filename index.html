@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from thesoilswap.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 May 2024 03:07:52 GMT -->
+<head>
+    <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/index.js"></script>
+    <title>THESOILVERSE</title>
+    <link rel="icon" href="assets/tsv/images/favicon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" type="text/css" href="assets/tsv/css/bootstrap.min0ff5.css?v=1.0.2">
+    <link href="assets/tsv/css/style0ff5.css?v=1.0.2" rel="stylesheet">
+    <link href="assets/tsv/css/responsive0ff5.css?v=1.0.2" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/tsv/fonts/stylesheet0ff5.css?v=1.0.2">
+    <link rel="stylesheet" type="text/css" href="assets/tsv/css/font-awesome.min0ff5.css?v=1.0.2">
+    <link href="assets/tsv/css/loader0ff5.css?v=1.0.2" rel="stylesheet">
+
+    <link href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+    <link rel='stylesheet' href='../cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+
+    </head>
+
+<body class=" main_home_page_i">
+
+    <style>
+        #loaderCall {
+            opacity: 999;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+        }
+
+        #loaderCall {
+            left: 30%;
+            position: relative;
+            /* height: 100vh; */
+            width: 200px;
+            height: 200px;
+            z-index: 1001;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #loaderCall:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #BE2F92;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+
+        #loaderCall:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #F2F2F3;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+    </style>
+    <div id="showLoaderAjax" class="loader-overlay">
+        <div class="loader-content loader-center text-center">
+            <!-- <img src="/assets/tsv/images/loader.png" class="loader-center" alt="please wait" width="165" /> -->
+            <div id="loaderCall"> <img src="assets/tsv/images/loader.png" class="img-fluid" alt="loader-logo" width="165"></div>
+            <div class="loader-center loader-text">Do not close or reload the page, your payment is verifying...</div>
+        </div>
+    </div>
+
+    <div id="loader-wrapper" class="page-loading">
+        <div id="preloader">
+            <div id="loader"> <img src="assets/tsv/images/loader.png" class="img-fluid" alt="loader-logo" width="165"></div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+            <header class="site_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 header_equal">
+
+                        <!--
+                        <nav class="navbar navbar-expand-xl navbar-light p-0 align-items-center">
+                            <a class="navbar-brand" href="https://thesoilverse.com/"><img src="/assets/tsv/images/logo.png" class="img-fluid" alt="logo"></a>
+
+                            <a class="d-block d-sm-none" href="https://thesoilverse.com/download/app/tsvWallet.apk" target="download"><img src="/assets/images/android.png" class="img-fluid" alt="android"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-xl-between" id="navbarSupportedContent">
+                                <ul class="navbar-nav mb-xl-0 mb-4 ms-lg-4">
+                                    <li class="nav-item d-none d-xl-block">
+                                        |
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="https://thesoilverse.com/">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://thesoilverse.com/#WhyChoose">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://thesoilverse.com/explore#ExploreSection">Marketplace</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://thesoilverse.com/governance">Governance</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://thesoilverse.com/#ContactUs">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav d-flex flex-wrap gap-3 ms-lg-4">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://thesoilverse.com/download/app/tsvWallet.apk" target="download">Download App <img src="/assets/images/android.png" class="img-fluid" alt="android"></a>
+                                    </li>
+
+                                                                            <li class="nav-item"><a class="nav-link text-white" href="https://thesoilverse.com/login">Login</a></li>
+                                        <li><a class="btn btn-primary header_btn" href="https://thesoilverse.com/register">Sign Up</a></li>
+                                                                    </ul>
+                                
+                            </div>
+                        </nav>
+                        -->
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+
+<style>
+    #tsvCelebratingday .modal-body,
+    #tsvAnnouncement .modal-body {
+        padding: 0px !important;
+    }
+
+    #tsvCelebratingday .btn-close,
+    #tsvAnnouncement .btn-close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        z-index: 9999;
+        color: #fff;
+        background-color: #fff;
+        padding: 4px;
+        background-size: 10px;
+    }
+</style>
+<!--========= TSV Popup Modal start ==========-->
+
+
+<section class="banner_section">
+    <div class="container">
+        <div class="row align-items-center pt-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <h4>Claim your <span class="green_text text-uppercase"> $150 </span> Now</h4>
+                <h1 class="text-white mt-3">The Soil Verse</h1>
+                <p class="mt-3 mb-3">We are happy to announce that we are releasing the USLD SWAP.
+                    Click on Swap to exchange your USLD or NLP Tokens for USDT or SOL.</p>
+                    <p class="mt-3 mb-3">Connect your wallet first to start the swap or to claim your giveaway.</p>
+                <button class="connect-wallet">Connect Wallet</button>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-5 mt-lg-0">
+                <div class="home_left_img_vector_main">
+                    <img src="assets/tsv/images/home_left_img_vector.png" class="img-fluid" alt="">
+                </div>
+                <img src="assets/tsv/images/home_left_img.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<section id="WhyChoose" class="why_choose_section common_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading text-center mb-5">
+                    <h4 class="green_text text-uppercase">The Soil verse</h4>
+                    <h1 class="text-white mt-2">Why choose us?</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center">
+                <div class="logo_border_animation">
+                    <img src="/assets/tsv/images/logo_border.png" class="img-fluid" alt="" width="400">
+                </div>
+                <img src="/assets/tsv/images/logo_border_icon.png" class="img-fluid" alt="" width="400">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-5 mt-lg-0">
+                <p>The concept for Real Estate Metaverse started to take shape in the year 2020, and it was decided to look into the insights of the emerging virtual lands selling and purchasing.</p>
+
+                <p class="mt-4">The Soil Verse platform is currently growing rapidly, and new individuals, businesses, and organizations are signing up to become virtual landowners and/or creators on a daily basis.</p>
+
+                <p class="mt-4">Thanks to the backing of some of the biggest investors and partners in the Metaverse space, Soil Verse has maintained its commitment to its goal of bettering the world.</p>
+
+                <a href="https://thesoilverse.com/#ExploreSection" class="btn btn btn-primary btn-border mt-4">Explore</a>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+
+<!--
+<section class="real_estate_section common_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading text-center mb-5">
+                    <h4 class="green_text text-uppercase">METAVERSE</h4>
+                    <h1 class="text-white mt-2">Real Estate & NFTs!</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center">
+                <img src="/assets/tsv/images/metaverse_left.png" class="img-fluid" alt="" width="450">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-5 mt-lg-0">
+                <p>Non-fungible tokens created specifically for the Metaverse to safeguard virtual attributes (NFTs). Every transaction is securely recorded on the blockchain and all NFTs are sent to the participant's online wallet where they can be used to purchase a piece of virtual real estate. Both online and offline real estate transactions adhere to a similar set of rules.</p>
+
+                <p class="mt-4">Each real estate Metaverse has a native currency that allows trading digital assets easier for users. Users can pay market rates for lands and other properties. Due to the native token's high level of volatility, the price of digital land is liable to alter. A virtual parcel of land on the platform map is represented by NFT "Land" on the Metaverse platform.</p>
+
+                <a href="https://thesoilverse.com/#ExploreSection" class="btn btn btn-primary btn-border mt-4">Explore</a>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+
+<!--
+<section class="investors_section common_section">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="heading text-start mb-4">
+                    <h4 class="green_text text-uppercase">INVESTORS</h4>
+                    <h1 class="text-white mt-2">The Potential For Real Estate Investors In Metaverse!</h1>
+                </div>
+                <p>At Soil Verse, Digital Real Estate and Metaverse land hold a lot of promise for NFT trade.</p>
+
+                <p class="mt-4">
+                    <span class="green_text">Digital Storefronts</span>-
+                    The Metaverse is becoming more prevalent in the digital stores for well-known corporations and business locations. By entering these establishments that are connected to the Metaverse, participants can peruse the fictitious stack of various NFTs that are listed on the Metaverse marketplace.</p>
+
+                <a href="https://thesoilverse.com/#ContactUs" class="btn btn btn-primary btn-border mt-4">Get Started</a>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center mt-5 mt-lg-0">
+                <img src="/assets/tsv/images/investors_l.png" class="img-fluid" alt="" width="">
+                <div class="investors_r_vector_main">
+                    <img src="/assets/tsv/images/investors_r.png" class="img-fluid" alt="" width="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!--
+<section id="ExploreSection" class="explore_lands_section common_section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="heading mb-4">
+                    <h2 class="text-white mt-2">Explore Lands</h2>
+                    <p class="justify-content-between d-md-flex">
+                        At Soil Verse, Digital Real Estate and Metaverse land hold a lot of promise for NFT trade.
+                        <a href="https://thesoilverse.com/explore"><img src="/assets/tsv/images/explore_lands_arrow.png" class="img-fluid" width="40"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="lands_card">
+                            <div class="lands_img">
+                                <a href="https://thesoilverse.com/nft-detail/1"><img src="/nftCollection/TSV-1.0.jpg" class="img-fluid" alt="lands"></a>
+                            </div>
+                            <h5 class="mt-3">TSV-1.0</h5>
+                            <p class="my-3">NFTs are digital files. They can be a jpeg of a piece of art, real estate, or a video.</p>
+                            <hr>
+                            <div class="justify-content-between d-flex align-items-center">
+                                <div class="card_price_section">
+                                    <p class="mb-0">Price:</p>
+                                    <h5 class="green_text">$100.00</h5>
+                                </div>
+                                <a href="https://thesoilverse.com/nft-detail/MQ==" class="btn btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="lands_card">
+                            <div class="lands_img">
+                                <a href="https://thesoilverse.com/nft-detail/2"><img src="/nftCollection/TSV-2.0.jpg" class="img-fluid" alt="lands"></a>
+                            </div>
+                            <h5 class="mt-3">TSV-2.0</h5>
+                            <p class="my-3">NFTs are digital files. They can be a jpeg of a piece of art, real estate, or a video.</p>
+                            <hr>
+                            <div class="justify-content-between d-flex align-items-center">
+                                <div class="card_price_section">
+                                    <p class="mb-0">Price:</p>
+                                    <h5 class="green_text">$501.00</h5>
+                                </div>
+                                <a href="https://thesoilverse.com/nft-detail/Mg==" class="btn btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="lands_card">
+                            <div class="lands_img">
+                                <a href="https://thesoilverse.com/nft-detail/3"><img src="/nftCollection/TSV-3.0.jpg" class="img-fluid" alt="lands"></a>
+                            </div>
+                            <h5 class="mt-3">TSV-3.0</h5>
+                            <p class="my-3">NFTs are digital files. They can be a jpeg of a piece of art, real estate, or a video.</p>
+                            <hr>
+                            <div class="justify-content-between d-flex align-items-center">
+                                <div class="card_price_section">
+                                    <p class="mb-0">Price:</p>
+                                    <h5 class="green_text">$1001.00</h5>
+                                </div>
+                                <a href="https://thesoilverse.com/nft-detail/Mw==" class="btn btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+-->
+
+<!--
+<section class="the_future_section common_section">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="heading text-start mb-4">
+                    <h4 class="green_text text-uppercase">The future</h4>
+                    <h1 class="text-white mt-2">Gaming & Entertainment</h1>
+                </div>
+                <p>Metaverse provides an infinite number of games, which supports the argument for decentralized gaming. Users can even build structures and other in-game commodities in the expensive gaming environment it provides, which has a wide range of cutting-edge possibilities.</p>
+
+                <p class="mt-4">The entertainment industry is significantly impacted by the metaverse because it connects various talent hubs with their unique consumer bases and creates an immersive viewing experience</p>
+
+                <a href="https://thesoilverse.com/#ContactUs" class="btn btn btn-primary btn-border mt-4">Read More</a>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center mt-5 mt-lg-0">
+                <img src="/assets/tsv/images/future-a.png" class="img-fluid" alt="" width="">
+                <div class="future_animation">
+                    <img src="/assets/tsv/images/future-b.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+
+<!--
+<section id="ContactUs" class="contact_us_section common_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-12 col-12 mx-auto">
+                <div class="row contact_us align-items-center">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-12">
+                        <div class="contact_us_img text-center text-md-start">
+                            <img src="/assets/tsv/images/contact_us_vector.png" alt="contact_us" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-12 mt-4">
+                        <h1>Get in Touch!</h1>
+                        <p>Got a question? We’d love to hear from you.</p>
+                        <form method="POST" id="contactform" class="contact-form">
+                            <input name="csrf_name" value="" type="hidden">
+                            <div class="mb-3 form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="mb-3 form-group">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Type Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!--Modal JS Script -->
+<!-- <script type="text/javascript">
+    window.onload = () => {
+        $('.openmodal').modal('show');
+        // $('#tsvCelebratingday').modal('show');
+    }
+</script> -->
+
+<footer class="pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="assets/tsv/images/f-logo.png" alt="img" width="60">
+
+                <ul class="social_icons list-unstyled d-flex flex-wrap mx-auto justify-content-center mt-4">
+                    <li><a href="https://www.instagram.com/thesoilverse.io" target="_blank"><img src="assets/tsv/images/instagram_w.png" alt="instagram" height="18" class="social_white"><img src="assets/tsv/images/instagram.png" alt="instagram" height="18" class="social_pink"></a></li>
+                    <li><a href="https://facebook.com/TheSoilverse" target="_blank"><img src="assets/tsv/images/facebook_w.png" alt="facebook" height="18" class="social_white"><img src="assets/tsv/images/facebook.png" alt="facebook" height="18" class="social_pink"></a></li>
+                    <li><a href="https://twitter.com/thesoilverse" target="_blank"><img src="assets/tsv/images/twitter_w.png" alt="twitter" height="16" class="social_white"><img src="assets/tsv/images/twitter.png" alt="twitter" height="16" class="social_pink"></a></li>
+                    <li><a href="https://t.me/OfficialTheSoilverse" target="_blank"><img src="assets/tsv/images/telegram_w.png" alt="telegram" height="18" class="social_white"><img src="assets/tsv/images/telegram.png" alt="telegram" height="18" class="social_pink"></a></li>
+                </ul>
+                <h6 class="mt-4">THE SOILVERSE LIMITED</h6>
+                <p>27, Old Gloucester Street, LONDON, WC1N 3AX, UNITED KINGDOM</p>
+                <hr>
+                <ul class="footer_navigation list-unstyled d-flex flex-wrap mt-3 justify-content-center align-items-center">
+                    <li class="">&copy; 2024. www.thesoilverse.com. All Rights Reserved</li>
+
+                                            <li class="dot"></li>
+                        <li><a href="https://thesoilverse.com/terms">Terms of use</a></li>
+                        <li class="dot"></li>
+                        <li><a href="https://thesoilverse.com/privacy">Privacy Policy</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/tsv/js/jquery.min0ff5.js?v=1.0.2"></script>
+<script src="assets/tsv/js/bootstrap.bundle.min0ff5.js?v=1.0.2"></script>
+<script src="assets/tsv/js/main0ff5.js?v=1.0.2"></script>
+<script src="assets/tsv/js/loader0ff5.js?v=1.0.2"></script>
+
+<script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+
+<!-- <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+<script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#contactform').bootstrapValidator({
+            excluded: ':disabled',
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please Enter Name'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please Enter Email'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'Please enter valid email format.'
+                        }
+                    }
+                },
+                message: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please Enter Message'
+                        }
+                    }
+                }
+            }
+        }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            var form = $(e.target);
+            var mydata = form.serialize();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "contactSubmit",
+                data: mydata,
+                success: function(data) {
+                    if (data.status == 0) {
+                        toastr.error(data.message);
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    } else {
+                        toastr.success(data.message);
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
+                },
+                error: function(xhr, textStatus) {
+                    toastr.error('Something went wrong, try again later.');
+                }
+            });
+        });
+    });
+</script>
+
+    <script src="assets/js/jquery-guard%401.10ff5.js?v=1.0.2"></script>
+
+
+</body>
+
+
+<!-- Mirrored from thesoilswap.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 May 2024 03:07:59 GMT -->
+</html>
+<script>
+ window.onload = () => {
+
+    $('.openNotification').first().modal('show');
+
+    $(".closeModal").on('click', function (event) {
+        $('.openNotification').modal('hide');
+        var counter = $(this).data('length') + 1;
+        $(`.openNotification:eq(${counter})`).modal('show');
+    }); 
+
+}
+</script>
